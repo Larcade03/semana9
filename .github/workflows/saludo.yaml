@@ -5,6 +5,9 @@ on:
     branches:
     - main
     - develop
+    
+env:
+  nombre: "Bray Vargas"
 
 jobs: 
   saludo:
@@ -12,8 +15,8 @@ jobs:
     steps:
       - name: Saludo desde main
         if: github.ref == 'refs/heads/main'
-        run: echo "Hola desde main, soy Bray Vargas"
+        run: echo "Hola desde main, soy ${{env.nombre}}"
 
       - name: Saludo desde develop
         if: github.ref == 'refs/heads/develop'
-        run: echo "Hola desde develop, soy Bray Vargas"
+        run: echo "Hola desde develop, soy ${{env.nombre}}"
