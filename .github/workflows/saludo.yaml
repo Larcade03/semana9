@@ -15,5 +15,5 @@ jobs:
         run: echo "Hola desde main, soy Bray Vargas"
 
       - name: Saludo desde develop
-        if: github.ref == 'refs/heads/develop"
+        if: github.ref == 'refs/heads/develop'
         run: echo "Hola desde develop, soy Bray Vargas"
